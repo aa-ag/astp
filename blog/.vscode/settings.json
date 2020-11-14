@@ -1,0 +1,13 @@
+{
+    "python.pythonPath": "/Users/aaronaguerrevere/opt/anaconda3/envs/testenv/bin/python",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true
+}
