@@ -9,6 +9,11 @@ class PostTest(unittest.TestCase):
         self.assertEqual('Test Title', new_post.title)
         self.assertEqual('Test Content', new_post.content)
 
+    def test_jsonify(self):
+        p = Post('Test title', 'Test content')
+        expected = {'title': 'Test title', 'content': 'Test content'}
+        self.assertDictEqual(expected, p.jsonify())
+
 
 if __name__ == '__main__':
     unittest.main()
