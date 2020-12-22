@@ -17,6 +17,11 @@ class AppTest(unittest.TestCase):
             mocked_print.assert_called_with(
                 '- Test title by Test author (0 posts)')
 
+    def test_menu(self):
+        with unittest.mock.patch('builtins.input') as mocked_input:
+            app.menu()
+            mocked_input.assert_called_with(app.MENU_PROMPT)
+
 
 if __name__ == '__main__':
     unittest.main()
