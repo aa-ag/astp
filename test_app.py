@@ -5,6 +5,17 @@ from blog import Blog
 
 
 class AppTest(unittest.TestCase):
+    def test_menu(self):
+        with unittest.mock.patch('builtins.input') as mocked_input:
+            app.menu()
+            mocked_input.assert_called_with(app.MENU_PROMPT)
+
+    def test_menu_print_blogs(self):
+        with unittest.mock.patch('app.print_blogs') as mocked_print_blogs:
+            with unittest.mock.patch('builtins.input'):
+                app.menu()
+                mocked_print_blogs.assert_called()
+
     def test_print_blogs(self):
         blog = Blog('Test title', 'Test author')
 
@@ -16,11 +27,6 @@ class AppTest(unittest.TestCase):
             app.print_blogs()
             mocked_print.assert_called_with(
                 '- Test title by Test author (0 posts)')
-
-    def test_menu(self):
-        with unittest.mock.patch('builtins.input') as mocked_input:
-            app.menu()
-            mocked_input.assert_called_with(app.MENU_PROMPT)
 
 
 if __name__ == '__main__':
