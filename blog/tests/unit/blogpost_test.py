@@ -5,5 +5,5 @@ from post import Post as post_class
 class PostTest(TestCase):
     def test_create_post(self):
         p = Post("Example title", "Lorem ipsum... (example content).")
-        pass
+        self.assertEqual("Example title", p.title)
 
