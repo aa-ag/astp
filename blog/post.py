@@ -1,4 +1,7 @@
 class Post:
     def __init__(self, title, content):
         self.title = title
-        self.content = "hard coded content"
+        self.content = content
+
+    def json_function():
+        pass
