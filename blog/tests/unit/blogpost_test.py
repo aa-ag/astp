@@ -10,3 +10,6 @@ class PostTest(TestCase):
         p = post.Post("Example title", "Lorem ipsum... (example content).")
         self.assertEqual("Example title", p.title)
         self.assertEqual("Lorem ipsum... (example content).", p.content)
+
+    def test_json_function(self):
+        pass
