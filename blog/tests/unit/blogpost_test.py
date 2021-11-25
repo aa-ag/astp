@@ -12,4 +12,6 @@ class PostTest(TestCase):
         self.assertEqual("Lorem ipsum... (example content).", p.content)
 
     def test_json_function(self):
-        pass
+        p = post.Post("Example title", "Lorem ipsum... (example content).")
+        expected = {"title": "Example title", "content": "Lorem ipsum... (example content)."}
+        self.assertDictEqual(expected, p.json_function())
