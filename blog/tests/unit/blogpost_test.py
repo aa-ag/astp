@@ -9,4 +9,4 @@ class PostTest(TestCase):
         '''
         p = post.Post("Example title", "Lorem ipsum... (example content).")
         self.assertEqual("Example title", p.title)
-        self.assertEqual("testing wrong content", p.content)
+        self.assertEqual("Lorem ipsum... (example content).", p.content)
