@@ -3,5 +3,8 @@ class Post:
         self.title = title
         self.content = content
 
-    def json_function():
-        pass
+    def json_function(self):
+        return {
+            'title': self.title,
+            'content': self.content,
+        }
