@@ -6,4 +6,4 @@ class BlogTest(TestCase):
         b = Blog("sample Title", "sample Author")
         self.assertEqual("sample Title", b.title)
         self.assertEqual("sample Author", b.author)
-        
+        self.assertListEqual([], b.posts)
