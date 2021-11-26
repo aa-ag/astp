@@ -8,3 +8,12 @@ class BlogTest(TestCase):
         self.assertEqual("sample Title", b.title)
         self.assertEqual("sample Author", b.author)
         self.assertListEqual([], b.posts)
+
+    def __repr__(self):
+        pass
+
+    def create_post(self, title, content):
+        pass
+
+    def jsonify_function(self):
+        pass
