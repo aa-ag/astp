@@ -9,7 +9,9 @@ class BlogTest(TestCase):
         self.assertEqual("sample Author", b.author)
         self.assertListEqual([], b.posts)
 
-    def __repr__(self):
-        return f"Blog {self.title} with articles by {self.author}, created."
+    def test__repr__(self):
+        expected = "Sample Blog by Sample Author (0 posts)."
+        self.assertEqual(blog.Blog.__repr__(self), expected)
 
+    
     
