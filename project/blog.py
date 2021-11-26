@@ -3,3 +3,10 @@ class Blog:
         self.title = title
         self.author = author
         self.posts = list()
+
+    def json_function(self):
+        return {
+            'title': self.title,
+            'author': self.author,
+            'posts': list(),
+        }

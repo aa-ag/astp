@@ -10,10 +10,6 @@ class BlogTest(TestCase):
         self.assertListEqual([], b.posts)
 
     def __repr__(self):
-        pass
+        return f"Blog {self.title} with articles by {self.author}, created."
 
-    def create_post(self, title, content):
-        pass
-
-    def jsonify_function(self):
-        pass
+    
