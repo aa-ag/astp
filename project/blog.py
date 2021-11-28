@@ -5,7 +5,7 @@ class Blog:
         self.posts = list()
 
     def __repr__(self):
-        return "Test by Test Author (0 posts)."
+        return f"{self.title} by {self.author} (0 posts)."
         
     def json_function(self):
         return {
