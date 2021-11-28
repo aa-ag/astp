@@ -13,8 +13,11 @@ class BlogTest(TestCase):
     def test__repr__(self):
         b1 = Blog("Test","Test Author")
         b2 = Blog("Another Test", "Another Author")
+        b3 = Blog("this is a title", "aLberT eInStEiN")
+
         self.assertEqual(b1.__repr__(), "Test by Test Author (0 posts).")
         self.assertEqual(b2.__repr__(), "Another Test by Another Author (0 posts).")
+        self.assertEqual(b3.__repr__(), "this is a title by aLberT eInStEiN (0 posts).")
 
     def create_post(self):
         pass
