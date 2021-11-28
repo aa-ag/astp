@@ -19,8 +19,9 @@ class BlogTest(TestCase):
         self.assertEqual(b2.__repr__(), "Another Test by Another Author (0 posts).")
         self.assertEqual(b3.__repr__(), "this is a title by aLberT eInStEiN (0 posts).")
 
-    def create_post(self):
-        pass
+    def test_repr_multiple_posts(self):
+        b = Blog("Blog title", "Blog author")
+        b.posts = ["this is a post", "this is another post", "this is a third post"]
 
     def jsonify_function(self):
         b = blog.Blog("sample Title", "sample Author", ["a blog post", "another blog post"])
