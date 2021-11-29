@@ -20,9 +20,13 @@ class BlogTest(TestCase):
         self.assertEqual(b3.__repr__(), "this is a title by aLberT eInStEiN (0 posts).")
 
     def test_repr_multiple_posts(self):
-        b = Blog("Blog title", "Blog author")
-        b.posts = ["this is a post", "this is another post", "this is a third post"]
-        self.assertEqual(b.__repr__(), "Blog title by Blog author (3 posts).")
+        b1 = Blog("Blog title", "Blog author")
+        b1.posts = ["this is a post", "this is another post", "this is a third post"]
+
+        b2 = Blog("Another blog title", "Another blog author")
+        b2.posts = []
+
+        self.assertEqual(b1.__repr__(), "Blog title by Blog author (3 posts).")
 
     def jsonify_function(self):
         b = blog.Blog("sample Title", "sample Author", ["a blog post", "another blog post"])
