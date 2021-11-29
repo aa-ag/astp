@@ -7,6 +7,9 @@ class Blog:
     def __repr__(self):
         posts_n = len(self.posts)
         return f"{self.title} by {self.author} ({posts_n} posts)."
+
+    def create_post(self, title, content):
+        pass
         
     def json_function(self):
         return {
