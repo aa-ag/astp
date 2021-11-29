@@ -27,7 +27,7 @@ class BlogTest(TestCase):
         b2.posts = []
 
         self.assertEqual(b1.__repr__(), "Blog title by Blog author (3 posts).")
-        self.assertEqual(b2.__repr__(), "Another blog title by Another blog author (0 posts).")
+        self.assertEqual(b2.__repr__(), "Another blog title by Another blog author (1 posts).")
 
     def jsonify_function(self):
         b = blog.Blog("sample Title", "sample Author", ["a blog post", "another blog post"])
