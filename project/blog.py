@@ -1,3 +1,5 @@
+import post
+
 class Blog:
     def __init__(self, title, author):
         self.title = title
@@ -9,7 +11,7 @@ class Blog:
         return f"{self.title} by {self.author} ({posts_n} posts)."
 
     def create_post(self, title, content):
-        pass
+        self.posts.append(post.Post(title, content))
         
     def json_function(self):
         return {
