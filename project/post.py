@@ -1,3 +1,10 @@
+############------------ IMPORTS ------------############
+
+
+############------------ GLOBAL VARIABLE(S) ------------############
+
+
+############------------ CLASS(ES) ------------############
 class Post:
     def __init__(self, title, content):
         self.title = title
@@ -8,3 +15,6 @@ class Post:
             'title': self.title,
             'content': self.content,
         }
+        
+
+############------------ DRIVER CODE ------------############
