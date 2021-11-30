@@ -6,7 +6,9 @@ In this repo, will consolidate exercises & class problems.
 
 ### Unit Testing
 
-Learning about what unit testing is & the origins of unit testing, [here](https://www.agilealliance.org/glossary/unit-test/#q=~(infinite~false~filters~(postType~(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video)~tags~(~'unit*20test))~searchTerm~'~sort~false~sortDirection~'asc~page~1)).
+- Learning about what unit testing is & the origins of unit testing, [here](https://www.agilealliance.org/glossary/unit-test/#q=~(infinite~false~filters~(postType~(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video)~tags~(~'unit*20test))~searchTerm~'~sort~false~sortDirection~'asc~page~1)).
+
+- Learning about unit test from a practical standpoint, in this StackOverflow thread [here](https://stackoverflow.com/questions/652292/what-is-unit-testing-and-how-do-you-do-it).
 
 ### env
 
