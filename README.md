@@ -10,6 +10,8 @@ In this repo, will consolidate exercises & class problems.
 
 - Learning about unit test from a practical standpoint, in this StackOverflow thread [here](https://stackoverflow.com/questions/652292/what-is-unit-testing-and-how-do-you-do-it).
 
+- Learning about Python 3's unit test library [here](https://docs.python.org/3/library/unittest.html).
+
 ### env
 
 - `conda activate astp`
