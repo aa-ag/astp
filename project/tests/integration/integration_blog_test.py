@@ -5,7 +5,7 @@ from project.blog import Blog
 
 class BlogTest(TestCase):
     def test_create_post_in_post(self):
-        b = blog.Blog("sample Title", "sample Title", ["a blog post", "another blog post"])
+        b = blog.Blog("sample Title", "sample Title")
         b.create_post("Test Post", "Test Content")
 
         self.assertEqual(len(b.posts), 1)
