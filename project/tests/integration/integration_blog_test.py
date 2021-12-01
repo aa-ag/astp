@@ -4,8 +4,8 @@ from project.blog import Blog
 
 
 class BlogTest(TestCase):
-    def test_create_post_in_post(self):
-        b = blog.Blog("sample Title", "sample Title")
+    def test_create_post_in_blog(self):
+        b = blog.Blog("sample Title", "sample Author")
         b.create_post("Test Post", "Test Content")
 
         self.assertEqual(len(b.posts), 1)
@@ -13,5 +13,11 @@ class BlogTest(TestCase):
         self.assertEqual(b.posts[0].content, "Test Content")
 
     def test_json(self):
-        b = blog.Blog("sample Title", "sample Title")
+        b = blog.Blog("sample Title", "sample Author")
         b.create_post("Test Post", "Test Content")
+
+        expected = {
+            'title': "sample Title",
+            'author': "sample Author",
+            'posts': [{"title": "Test Post", "content": "Test Content"}],
+        }
