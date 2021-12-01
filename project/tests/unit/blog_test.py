@@ -44,4 +44,5 @@ class BlogTest(TestCase):
 
         self.assertEqual(len(b.posts), 1)
         self.assertEqual(b.posts[0].title, "Test Post")
+        self.assertEqual(b.posts[0].content, "Test Content")
     
