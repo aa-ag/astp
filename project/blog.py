@@ -20,7 +20,7 @@ class Blog:
         return {
             'title': self.title,
             'author': self.author,
-            'posts': [p.json() for p in self.posts],
+            'posts': [p.json_function() for p in self.posts],
         }
 
 
