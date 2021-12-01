@@ -37,7 +37,4 @@ class BlogTest(TestCase):
             "posts": ["a blog post", "another blog post"],
         }
         self.assertDictEqual(expected, b.json_function())
-
-    def test_create_post_in_blog(self):
-        pass
     
