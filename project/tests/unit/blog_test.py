@@ -39,5 +39,9 @@ class BlogTest(TestCase):
         self.assertDictEqual(expected, b.json_function())
 
     def test_create_post_in_post(self):
-        pass
+        b = blog.Blog("sample Title", "sample Title", ["a blog post", "another blog post"])
+        b.create_post("Test Post", "Test Content")
+
+        self.assertEqual(len(b.posts), 1)
+        
     
