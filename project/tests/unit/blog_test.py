@@ -43,5 +43,5 @@ class BlogTest(TestCase):
         b.create_post("Test Post", "Test Content")
 
         self.assertEqual(len(b.posts), 1)
-        
+        self.assertEqual(b.posts[0].title, "Test Post")
     
