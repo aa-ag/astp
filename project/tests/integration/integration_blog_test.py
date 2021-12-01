@@ -17,7 +17,7 @@ class BlogTest(TestCase):
         expected = {
             'title': "sample Title",
             'author': "sample Author",
-            'posts': [],
+            'posts': list(),
         }
 
         self.assertEqual(expected, b.json_function())
