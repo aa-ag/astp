@@ -12,5 +12,6 @@ class BlogTest(TestCase):
         self.assertEqual(b.posts[0].title, "Test Post")
         self.assertEqual(b.posts[0].content, "Test Content")
 
-    
+    def test_json(self):
+        pass
     
