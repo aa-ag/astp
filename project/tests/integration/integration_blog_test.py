@@ -13,7 +13,14 @@ class BlogTest(TestCase):
         self.assertEqual(b.posts[0].content, "Test Content")
 
     def test_json_without_posts(self):
-        pass
+        b = blog.Blog("sample Title", "sample Author")
+        expected = {
+            'title': "sample Title",
+            'author': "sample Author",
+            'posts': [],
+        }
+
+        self.assertEqual(expected, b.json_function())
 
     def test_json(self):
         b = blog.Blog("sample Title", "sample Author")
