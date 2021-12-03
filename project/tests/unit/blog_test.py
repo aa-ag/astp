@@ -27,7 +27,7 @@ class BlogTest(TestCase):
 
     def test_repr_multiple_posts(self):
         '''
-         tests creation of more than one post in a blog
+         tests __repr__ method for blog with more than one post
         '''
         b1 = Blog("Blog title", "Blog author")
         b1.posts = ["this is a post", "this is another post", "this is a third post"]
