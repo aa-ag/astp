@@ -6,7 +6,7 @@ from project.blog import Blog
 class BlogTest(TestCase):
     def test_create_post_in_blog(self):
         '''
-         tests creating a post in a blog
+         tests creating a post in a blog (blog.py's Blog class)
         '''
         b = blog.Blog("sample Title", "sample Author")
         b.create_post("Test Post", "Test Content")

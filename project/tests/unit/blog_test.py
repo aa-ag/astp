@@ -5,12 +5,18 @@ from project.blog import Blog
 
 class BlogTest(TestCase):
     def test_blog_creation(self):
+        '''
+         tests creating a blog
+        '''
         b = blog.Blog("sample Title", "sample Author")
         self.assertEqual("sample Title", b.title)
         self.assertEqual("sample Author", b.author)
         self.assertListEqual([], b.posts)
 
     def test__repr__(self):
+        '''
+         tests Blog class' repr method
+        '''
         b1 = Blog("Test","Test Author")
         b2 = Blog("Another Test", "Another Author")
         b3 = Blog("this is a title", "aLberT eInStEiN")
