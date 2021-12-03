@@ -30,6 +30,10 @@ class BlogTest(TestCase):
         self.assertEqual(expected, b.json_function())
 
     def test_json(self):
+        '''
+         tests json_function from blog.py's Blog class,
+         with posts
+        '''
         b = blog.Blog("sample Title", "sample Author")
         b.create_post("Test Post", "Test Content")
 
