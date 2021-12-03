@@ -26,6 +26,9 @@ class BlogTest(TestCase):
         self.assertEqual(b3.__repr__(), "this is a title by aLberT eInStEiN (0 posts).")
 
     def test_repr_multiple_posts(self):
+        '''
+         tests creation of more than one post in a blog
+        '''
         b1 = Blog("Blog title", "Blog author")
         b1.posts = ["this is a post", "this is another post", "this is a third post"]
 
