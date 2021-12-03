@@ -39,6 +39,9 @@ class BlogTest(TestCase):
         self.assertEqual(b2.__repr__(), "Another blog title by Another blog author (0 posts).")
 
     def jsonify_function(self):
+        '''
+         tests Blog class' json_function method
+        '''
         b = blog.Blog("sample Title", "sample Author", ["a blog post", "another blog post"])
         expected = {
             "title": "sample Tile",
