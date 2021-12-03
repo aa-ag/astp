@@ -16,6 +16,10 @@ class BlogTest(TestCase):
         self.assertEqual(b.posts[0].content, "Test Content")
 
     def test_json_without_posts(self):
+        '''
+         tests json_function from blog.py's Blog class,
+         with no posts
+        '''
         b = blog.Blog("sample Title", "sample Author")
         expected = {
             'title': "sample Title",
