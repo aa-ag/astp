@@ -9,6 +9,9 @@ import app
 ############------------ CLASS(ES) ------------############
 class AppTest(TestCase):
     def test_print_blogs(self):
-        pass
+        with patch('builtins.print') as mocked_print:
+            app.print_blogs()
+            mocked_print.assert_called_with('Test Blog')
+
 
 ############------------ DRIVER CODE ------------############
