@@ -20,7 +20,7 @@ def print_blogs():
      print all available blogs
     '''
     for blog_name, blog_object in blogs.items():
-        print(blog_object)
+        print(str(blog_object))
 
 
 ############------------ DRIVER CODE ------------############
