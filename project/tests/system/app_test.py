@@ -6,6 +6,8 @@ import app
 
 
 ############------------ CLASS(ES) ------------############
-
+class AppTest(TestCase):
+    def test_print_blogs(self):
+        pass
 
 ############------------ DRIVER CODE ------------############
