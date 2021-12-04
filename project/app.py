@@ -10,6 +10,9 @@ def menu():
 
 
 def print_blogs():
+    '''
+     print all available blogs
+    '''
     pass
 
 
