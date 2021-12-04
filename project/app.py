@@ -2,6 +2,7 @@
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
+blogs = dict()
 
 
 ############------------ FUNCTION(S) ------------############
@@ -13,7 +14,8 @@ def print_blogs():
     '''
      print all available blogs
     '''
-    pass
+    for blog_name, blog_object in blogs.items():
+        print(blog_object)
 
 
 ############------------ DRIVER CODE ------------############
