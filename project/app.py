@@ -1,5 +1,5 @@
 ############------------ IMPORTS ------------############
-
+import blog
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 blogs = dict()
@@ -28,7 +28,9 @@ def menu():
 
 
 def ask_create_blog():
-    pass
+    title = input('Enter Blog\'s name: ')
+    author = input('Enter Blog\'s author name:\n')
+    blogs[title] = blog.Blog(title, author)
 
 
 def list_blogs():
@@ -45,6 +47,7 @@ def ask_read_blog():
 
 def ask_create_post():
     pass
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
