@@ -1,5 +1,6 @@
 ############------------ IMPORTS ------------############
 from unittest import TestCase
+from unittest import mock
 from unittest.mock import patch
 import app
 from project.app import print_blogs
@@ -29,7 +30,10 @@ class AppTest(TestCase):
             mocked_print.assert_called_with("Test by Test Author (0 posts).")
 
     def test_ask_create_blog(self):
-        pass
+        with patch('builtins.input') as mocked_input:
+            app.ask_create_blog()
+
+            self.assertIsNotNone(app.blogs.get('Test'))
     
 
 
