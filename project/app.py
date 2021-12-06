@@ -11,7 +11,7 @@ go ahead:  '''
 
 ############------------ FUNCTION(S) ------------############
 def menu():
-    print_blogs()
+    list_blogs()
 
     selection = input(MENU_PROMPT)
 
@@ -19,7 +19,7 @@ def menu():
         if selection == 'c':
             ask_create_blog()
         elif selection == 'l':
-            print_blogs()
+            list_blogs()
         elif selection == 'r':
             ask_read_blog()
         elif selection == 'p':
@@ -27,7 +27,7 @@ def menu():
         selection = input(MENU_PROMPT)
 
 
-def print_blogs():
+def list_blogs():
     '''
      print all available blogs
     '''
