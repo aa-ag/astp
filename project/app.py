@@ -28,6 +28,10 @@ def menu():
 
 
 def ask_create_blog():
+    '''
+     creates a blog with input from user
+     for title & author
+    '''
     title = input('Enter Blog\'s name: ')
     author = input('Enter Blog\'s author name:\n')
     blogs[title] = blog.Blog(title, author)
