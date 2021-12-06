@@ -15,6 +15,18 @@ def menu():
 
     selection = input(MENU_PROMPT)
 
+    while selection != 'q':
+        if selection == 'c':
+            ask_create_blog()
+        elif selection == 'l':
+            print_blogs()
+        elif selection == 'r':
+            ask_read_blog()
+        elif selection == 'p':
+            ask_create_post()
+        selection = input(MENU_PROMPT)
+
+
 def print_blogs():
     '''
      print all available blogs
