@@ -27,6 +27,10 @@ def menu():
         selection = input(MENU_PROMPT)
 
 
+def ask_create_blog():
+    pass
+
+
 def list_blogs():
     '''
      print all available blogs
@@ -34,6 +38,13 @@ def list_blogs():
     for blog_name, blog_object in blogs.items():
         print(str(blog_object))
 
+
+def ask_read_blog():
+    pass
+
+
+def ask_create_post():
+    pass
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
