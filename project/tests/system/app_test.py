@@ -4,6 +4,7 @@ from unittest import mock
 from unittest.mock import patch
 import app
 from project.blog import Blog
+from project.post import Post
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 
@@ -59,7 +60,12 @@ class AppTest(TestCase):
 
 
     def test_print_post(self):
-        pass
+        post = Post('Post Title', 'Post content')
+        expected_print = 'Post Title... Post content'
+
+        with patch('builtins.print') as mocked_print:
+            app.print_post(post)
+            mocked_print.assert_called_with(expected_print)
 
 
 ############------------ DRIVER CODE ------------############

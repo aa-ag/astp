@@ -49,12 +49,15 @@ def ask_read_blog():
         title = input('Enter the blog title you want to read: ')
         print_posts(blogs[title])
 
+
 def print_posts(blog):
     for post in blog.posts:
         print_post(post)
 
+
 def print_post(post):
-    print(f"{post.title} {post.author}")
+    print(f"{post.title}... {post.content}")
+
 
 def ask_create_post():
     pass
