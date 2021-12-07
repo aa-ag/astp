@@ -20,6 +20,10 @@ class Blog:
     def ask_read_blog(self):
         title = input('Enter the blog title you want to read: ')
         print_posts(blogs[title])
+
+    def print_posts(self):
+        for post in blog.posts:
+            print_post(post)
         
     def json_function(self):
         return {
