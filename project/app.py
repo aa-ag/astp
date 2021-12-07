@@ -64,7 +64,7 @@ def ask_create_post():
     title = input('Your post\'s title:\n')
     content = input('Your post\'s content:\n')
 
-    
+    blogs[blog_name].create_post(title, content)
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":

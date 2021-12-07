@@ -68,4 +68,8 @@ class AppTest(TestCase):
             mocked_print.assert_called_with(expected_print)
 
 
+def test_ask_create_post(self):
+    pass
+
+
 ############------------ DRIVER CODE ------------############
