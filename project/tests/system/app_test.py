@@ -15,7 +15,7 @@ class AppTest(TestCase):
     #         app.menu()
     #         mocked_input.assert_called_with(app.MENU_PROMPT)
     
-    
+
     def test_menu_calls_print_blogs(self):
         with patch('app.list_blogs') as mocked_print_blogs:
             with patch('builtins.input', return_value='q'):
@@ -48,8 +48,14 @@ class AppTest(TestCase):
                 mocked_print_posts.assert_called_with(b)
 
 
-    def test_print_post(self):
-        pass
+    def test_print_posts(self):
+        blog = Blog('Test', 'Test Author')
+        blog.create_post('Test Post','Test Content')
+        app.blogs = {'Test': blog}
+
+        with patch('app.print_post') as mocked_print_post:
+            app.print_posts(blog)
+            mocked_print_post.assert_called_with(blog.posts[0])
 
 
 ############------------ DRIVER CODE ------------############
