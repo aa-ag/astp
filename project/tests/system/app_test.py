@@ -3,7 +3,7 @@ from unittest import TestCase
 from unittest import mock
 from unittest.mock import patch
 import app
-from project.app import print_blogs
+from project.app import *
 from project.blog import Blog
 
 ############------------ GLOBAL VARIABLE(S) ------------############
@@ -17,7 +17,7 @@ class AppTest(TestCase):
             mocked_input.assert_called_with(app.MENU_PROMPT)
     
     def test_menu_calls_print_blogs(self):
-        with patch('app.print_blogs') as mocked_print_blogs:
+        with patch('app.list_blogs') as mocked_print_blogs:
             with patch('builtins.input', return_value='q'):
                 app.menu()
                 mocked_print_blogs.assert_called()
