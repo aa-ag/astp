@@ -45,12 +45,17 @@ def list_blogs():
         print(str(blog_object))
 
 
-def ask_read_blog():
-    pass
+def ask_read_blog(blog):
+        title = input('Enter the blog title you want to read: ')
+        print_posts(blogs[title])
 
+def print_posts(post):
+    for post in blog.posts:
+        print_post(post)
 
-def ask_create_post():
-    pass
+def print_post(post):
+    print(f"{post.title} {post.author}")
+
 
 
 ############------------ DRIVER CODE ------------############
