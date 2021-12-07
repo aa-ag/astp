@@ -15,16 +15,16 @@ def menu():
 
     selection = input(MENU_PROMPT)
 
-    # while selection != 'q':
-    #     if selection == 'c':
-    #         ask_create_blog()
-    #     elif selection == 'l':
-    #         list_blogs()
-    #     elif selection == 'r':
-    #         ask_read_blog()
-    #     elif selection == 'p':
-    #         ask_create_post()
-    #     selection = input(MENU_PROMPT)
+    while selection != 'q':
+        if selection == 'c':
+            ask_create_blog()
+        elif selection == 'l':
+            list_blogs()
+        elif selection == 'r':
+            ask_read_blog()
+        elif selection == 'p':
+            ask_create_post()
+        selection = input(MENU_PROMPT)
 
 
 def ask_create_blog():
@@ -45,11 +45,11 @@ def list_blogs():
         print(str(blog_object))
 
 
-def ask_read_blog(blog):
+def ask_read_blog():
         title = input('Enter the blog title you want to read: ')
         print_posts(blogs[title])
 
-def print_posts(post):
+def print_posts(blog):
     for post in blog.posts:
         print_post(post)
 
