@@ -60,7 +60,11 @@ def print_post(post):
 
 
 def ask_create_post():
-    pass
+    blog_name  = input('Blog title where you want to write a post:\n')
+    title = input('Your post\'s title:\n')
+    content = input('Your post\'s content:\n')
+
+    
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
