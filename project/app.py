@@ -15,16 +15,16 @@ def menu():
 
     selection = input(MENU_PROMPT)
 
-    while selection != 'q':
-        if selection == 'c':
-            ask_create_blog()
-        elif selection == 'l':
-            list_blogs()
-        elif selection == 'r':
-            ask_read_blog()
-        elif selection == 'p':
-            ask_create_post()
-        selection = input(MENU_PROMPT)
+    # while selection != 'q':
+    #     if selection == 'c':
+    #         ask_create_blog()
+    #     elif selection == 'l':
+    #         list_blogs()
+    #     elif selection == 'r':
+    #         ask_read_blog()
+    #     elif selection == 'p':
+    #         ask_create_post()
+    #     selection = input(MENU_PROMPT)
 
 
 def ask_create_blog():
