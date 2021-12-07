@@ -56,7 +56,8 @@ def print_posts(post):
 def print_post(post):
     print(f"{post.title} {post.author}")
 
-
+def ask_create_post():
+    pass
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
