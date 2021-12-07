@@ -58,4 +58,8 @@ class AppTest(TestCase):
             mocked_print_post.assert_called_with(blog.posts[0])
 
 
+    def test_print_post(self):
+        pass
+
+
 ############------------ DRIVER CODE ------------############
