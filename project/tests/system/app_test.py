@@ -1,5 +1,6 @@
 ############------------ IMPORTS ------------############
 from unittest import TestCase
+from unittest import mock
 from unittest.mock import patch
 import app
 from project.blog import Blog
@@ -35,8 +36,12 @@ class AppTest(TestCase):
             self.assertIsNotNone(app.blogs['This is a fake Title'])
 
     def test_ask_read_blog(self):
-        pass
-    
+        b = Blog('Test', 'Test Author')
+        app.blogs = {'Test': b}
+        with patch('builtins.input', return_value='Test'):
+            with patch('app.print_posts') as mocked_print_posts:
+                app.ask_read_blog()
+                mocked_print_posts.assert_called_with(b)
 
 
 ############------------ DRIVER CODE ------------############
