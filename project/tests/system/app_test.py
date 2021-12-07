@@ -15,6 +15,18 @@ class AppTest(TestCase):
     #     with patch('builtins.input') as mocked_input:
     #         app.menu()
     #         mocked_input.assert_called_with(app.MENU_PROMPT)
+
+    def test_c(self):
+        pass
+
+    def test_l(self):
+        pass
+
+    def test_r(self):
+        pass
+
+    def test_p(self):
+        pass
     
 
     def test_menu_calls_print_blogs(self):
