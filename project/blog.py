@@ -1,5 +1,6 @@
 ############------------ IMPORTS ------------############
 import post
+from project.app import list_blogs
 
 
 ############------------ CLASS(ES) ------------############
@@ -15,6 +16,10 @@ class Blog:
 
     def create_post(self, title, content):
         self.posts.append(post.Post(title, content))
+
+    def ask_read_blog(self):
+        title = input('Enter the blog title you want to read: ')
+        print_posts(blogs[title])
         
     def json_function(self):
         return {
