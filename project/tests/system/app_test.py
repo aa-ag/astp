@@ -33,6 +33,9 @@ class AppTest(TestCase):
             app.ask_create_blog()
 
             self.assertIsNotNone(app.blogs['This is a fake Title'])
+
+    def test_ask_read_blog(self):
+        pass
     
 
 
