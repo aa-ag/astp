@@ -11,6 +11,9 @@ from project.post import Post
 
 ############------------ CLASS(ES) ------------############
 class AppTest(TestCase):
+    def set_up(self):
+        pass
+    
     # def test_menu_prints_prompt(self):
     #     with patch('builtins.input') as mocked_input:
     #         app.menu()
