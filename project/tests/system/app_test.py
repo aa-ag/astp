@@ -50,6 +50,10 @@ class AppTest(TestCase):
                 
 
     def test_r(self):
+        '''
+         mocks input to menu, then mocks input of `r` and then `q` to quit;
+         tests if `ask_read_blog` is called when user inputs `r`
+        '''
         with patch('builtins.input') as mocked_input:
             with patch('app.ask_read_blog') as mocked_r:
                 mocked_input.side_effect = ('r', 'q')
