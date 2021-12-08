@@ -11,13 +11,13 @@ from project.post import Post
 
 ############------------ CLASS(ES) ------------############
 class AppTest(TestCase):
-    def set_up(self):
-        pass
-    
     # def test_menu_prints_prompt(self):
     #     with patch('builtins.input') as mocked_input:
     #         app.menu()
     #         mocked_input.assert_called_with(app.MENU_PROMPT)
+    def setUp(self):
+        blog = Blog('Test Blog Title', 'Test Blog Author')
+        app.blogs = {'Test Blog Title': blog}
 
     def test_c(self):
         '''
@@ -29,8 +29,8 @@ class AppTest(TestCase):
             with patch('app.ask_create_blog') as mocked_c:
                 mocked_input.side_effect = (
                     'b', 
-                    'Test Create Blog', 
-                    'Test Author', 
+                    'Test Blog Title', 
+                    'Test Blog Author', 
                     'q'
                 )
 
@@ -87,34 +87,29 @@ class AppTest(TestCase):
     
 
     def test_print_blogs(self):
-        b = Blog('Test', 'Test Author')
-        app.blogs = {'Test': b}
         with patch('builtins.print') as mocked_print:
             app.list_blogs()
-            mocked_print.assert_called_with("Test by Test Author (0 posts).")
+            mocked_print.assert_called_with("Test Blog Title by Test Blog Author (0 posts).")
 
 
     def test_ask_create_blog(self):
         with patch('builtins.input') as mocked_input:
-            mocked_input.side_effect = ('This is a fake Title', 'Test Author')
+            mocked_input.side_effect = ('Test Blog Title', 'Test Blog Author')
             app.ask_create_blog()
 
-            self.assertIsNotNone(app.blogs['This is a fake Title'])
+            self.assertIsNotNone(app.blogs['Test Blog Title'])
 
 
     def test_ask_read_blog(self):
-        b = Blog('Test', 'Test Author')
-        app.blogs = {'Test': b}
-        with patch('builtins.input', return_value='Test'):
+        with patch('builtins.input', return_value='Test Blog Title'):
             with patch('app.print_posts') as mocked_print_posts:
                 app.ask_read_blog()
-                mocked_print_posts.assert_called_with(b)
+                mocked_print_posts.assert_called_with(app.blogs['Test Blog Title'])
 
 
     def test_print_posts(self):
-        blog = Blog('Test', 'Test Author')
-        blog.create_post('Test Post','Test Content')
-        app.blogs = {'Test': blog}
+        blog = app.blogs['Test Blog Title']
+        blog.create_post('Test Post Title','Test Post Content')
 
         with patch('app.print_post') as mocked_print_post:
             app.print_posts(blog)
@@ -122,8 +117,8 @@ class AppTest(TestCase):
 
 
     def test_print_post(self):
-        post = Post('Post Title', 'Post content')
-        expected_print = 'Post Title... Post content'
+        post = Post('Test Post Title', 'Test Post Content')
+        expected_print = 'Test Post Title... Test Post Content'
 
         with patch('builtins.print') as mocked_print:
             app.print_post(post)
@@ -131,16 +126,13 @@ class AppTest(TestCase):
 
 
     def test_ask_create_post(self):
-        blog = Blog('Test', 'Test Author')
-        app.blogs = {'Test': blog}
-
         with patch('builtins.input') as mocked_input:
-            mocked_input.side_effect = ('Test', 'Test Title', 'Test Content')
+            mocked_input.side_effect = ('Test Blog Title', 'Test Post Title', 'Test Post Content')
 
             app.ask_create_post()
 
-            self.assertEqual(blog.posts[0].title, 'Test Title')
-            self.assertEqual(blog.posts[0].content, 'Test Content')
+            self.assertEqual(app.blogs['Test Blog Title'].posts[0].title, 'Test Post Title')
+            self.assertEqual(app.blogs['Test Blog Title'].posts[0].content, 'Test Post Content')
 
 
 
