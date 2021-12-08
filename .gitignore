@@ -22,12 +22,12 @@ package-lock.json
 # VSS
 .vscode
 .vscode/*
-!.vscode/settings.json
+# !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
-settings.json
+# settings.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
