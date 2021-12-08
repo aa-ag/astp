@@ -3,8 +3,8 @@ from unittest import TestCase
 from unittest import mock
 from unittest.mock import patch
 import app
-from project.blog import Blog
-from project.post import Post
+from blog_project.blog import Blog
+from blog_project.post import Post
 
 ### wherever docstring isn't provided is from class
 

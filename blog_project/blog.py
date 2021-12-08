@@ -1,6 +1,6 @@
 ############------------ IMPORTS ------------############
 import post
-from project.app import list_blogs
+from blog_project.app import list_blogs
 
 
 ############------------ CLASS(ES) ------------############
