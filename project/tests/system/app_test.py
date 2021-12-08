@@ -25,13 +25,20 @@ class AppTest(TestCase):
                     'Test Author', 
                     'q'
                 )
-                
+
                 app.menu()
 
                 mocked_c.assert_called()
 
     def test_l(self):
-        pass
+        with patch('builtins.input') as mocked_input:
+            with patch('app.list_blogs') as mocked_l:
+                mocked_input.side_effect = ('l', 'q')
+
+                app.menu()
+
+                mocked_l.assert_called()
+                
 
     def test_r(self):
         pass
