@@ -63,6 +63,10 @@ class AppTest(TestCase):
                 mocked_r.assert_called()
 
     def test_p(self):
+        '''
+         mocks input to menu, then mocks input of `p` and then `q` to quit;
+         tests if `ask_create_post` is called when user inputs `p`
+        '''
         with patch('builtins.input') as mocked_input:
             with patch('app.ask_create_post') as mocked_p:
                 mocked_input.side_effect = ('p', 'q')
