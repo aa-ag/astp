@@ -36,6 +36,10 @@ class AppTest(TestCase):
                 mocked_c.assert_called()
 
     def test_l(self):
+        '''
+         mocks input to menu, then mocks input of `l` and then `q` to quit;
+         tests if `list_blogs` is called when user inputs `l`
+        '''
         with patch('builtins.input') as mocked_input:
             with patch('app.list_blogs') as mocked_l:
                 mocked_input.side_effect = ('l', 'q')
