@@ -17,6 +17,11 @@ class AppTest(TestCase):
     #         mocked_input.assert_called_with(app.MENU_PROMPT)
 
     def test_c(self):
+        '''
+         mocks input to menu, then mocks input of `b`,
+         blog title, blog's author and then `q` to quit;
+         tests if `ask_create_blog` is called when user inputs `b`
+        '''
         with patch('builtins.input') as mocked_input:
             with patch('app.ask_create_blog') as mocked_c:
                 mocked_input.side_effect = (
