@@ -6,7 +6,7 @@ import app
 from project.blog import Blog
 from project.post import Post
 
-############------------ GLOBAL VARIABLE(S) ------------############
+### wherever docstring isn't provided is from class
 
 
 ############------------ CLASS(ES) ------------############
