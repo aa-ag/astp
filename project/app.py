@@ -3,7 +3,7 @@ import blog
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 blogs = dict()
-MENU_PROMPT = '''Press "c" to create a blog 
+MENU_PROMPT = '''Press "b" to create a blog 
 "l" to list all blogs
 "p" to create a post
 "q" to quit the program
@@ -16,7 +16,7 @@ def menu():
     selection = input(MENU_PROMPT)
 
     while selection != 'q':
-        if selection == 'c':
+        if selection == 'b':
             ask_create_blog()
         elif selection == 'l':
             list_blogs()

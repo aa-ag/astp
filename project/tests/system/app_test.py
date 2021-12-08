@@ -20,7 +20,7 @@ class AppTest(TestCase):
         with patch('builtins.input') as mocked_input:
             with patch('app.ask_create_blog') as mocked_c:
                 mocked_input.side_effect = (
-                    'c', 
+                    'b', 
                     'Test Create Blog', 
                     'Test Author', 
                     'q'
@@ -50,7 +50,13 @@ class AppTest(TestCase):
                 mocked_r.assert_called()
 
     def test_p(self):
-        pass
+        with patch('builtins.input') as mocked_input:
+            with patch('app.ask_create_post') as mocked_p:
+                mocked_input.side_effect = ('p', 'q')
+
+                app.menu()
+
+                mocked_p.assert_called()
     
 
     def test_menu_calls_print_blogs(self):
