@@ -41,7 +41,13 @@ class AppTest(TestCase):
                 
 
     def test_r(self):
-        pass
+        with patch('builtins.input') as mocked_input:
+            with patch('app.ask_read_blog') as mocked_r:
+                mocked_input.side_effect = ('r', 'q')
+
+                app.menu()
+
+                mocked_r.assert_called()
 
     def test_p(self):
         pass
