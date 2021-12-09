@@ -15,3 +15,4 @@ In this repo, will consolidate exercises & class problems.
 ### env
 
 - `conda activate astp`
+- `conda install -c anaconda flask`
