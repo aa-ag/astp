@@ -1,8 +1,10 @@
 ############------------ IMPORTS ------------############
 from flask import Flask, jsonify
 
+
 ############------------ GLOBAL VARIABLE(S) ------------############
 app = Flask(__name__)
+
 
 ############------------ FUNCTION(S) ------------############
 @app.route('/')
