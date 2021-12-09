@@ -1,6 +1,7 @@
 ############------------ IMPORTS ------------############
 from unittest import TestCase
 from app import app
+import json
 
 
 ############------------ FUNCTION(S) ------------############
@@ -13,3 +14,10 @@ class TestHome(TestCase):
             response = c.get('/')
 
             self.assertEqual(response.status_code, 200)
+            
+            expected = {'message': 'Hello, Wolrd!'}
+
+            self.assertEqual(
+                json.loads(response.get_data()),
+                expected
+            )
