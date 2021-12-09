@@ -13,7 +13,12 @@ class TestHome(TestCase):
             # endpoint works as expected
             response = c.get('/')
 
-            self.assertEqual(response.status_code, 200)
+            possible_http_responses = [200, 201]
+
+            self.assertIn(
+                response.status_code, 
+                possible_http_responses
+            )
             
             expected = {'message': 'Hello, Wolrd!'}
 
