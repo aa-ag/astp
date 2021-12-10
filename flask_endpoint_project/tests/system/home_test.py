@@ -7,7 +7,7 @@ import json
 class TestHome(BaseTest):
     def test_home(self):
         # initialize a context manager
-        with app.test_client() as c:
+        with self.app() as c:
             # makes a get request to test
             # endpoint works as expected
             response = c.get('/')
