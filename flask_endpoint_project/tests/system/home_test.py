@@ -1,11 +1,10 @@
 ############------------ IMPORTS ------------############
-from unittest import TestCase
-from app import app
+from tests.system.tests_base import BaseTest
 import json
 
 
 ############------------ FUNCTION(S) ------------############
-class TestHome(TestCase):
+class TestHome(BaseTest):
     def test_home(self):
         # initialize a context manager
         with app.test_client() as c:
