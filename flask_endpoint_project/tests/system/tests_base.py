@@ -5,6 +5,7 @@ from app import app
 ############------------ GLOBAL VARIABLE(S) ------------############
 class BaseTest(TestCase):
     def setUp(self):
+        app.testing = True
         self.app = app.test_client
 
 ############------------ FUNCTION(S) ------------############
