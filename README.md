@@ -17,3 +17,4 @@ In this repo, will consolidate exercises & class problems.
 - `conda activate astp`
 - `conda install -c anaconda flask`
 - `pip install flask_restful`
+- `pip install Flask-SQLAlchemy`
