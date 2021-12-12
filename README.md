@@ -18,3 +18,4 @@ In this repo, will consolidate exercises & class problems.
 - `conda install -c anaconda flask`
 - `pip install flask_restful`
 - `pip install Flask-SQLAlchemy`
+- `pip install psycopg2-binary`
