@@ -10,10 +10,6 @@ class ModelTest(TestCase):
         self.assertEqual(ItemModel.__tablename__, expected)
 
 
-    def test_test(self):
-        expected = "a"
-        self.assertEqual(expected, 'a')
-
 ############------------ FUNCTION(S) ------------############
 
 
