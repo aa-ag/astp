@@ -12,7 +12,7 @@ class ItemModel(db.Model):
         self.name = name
         self.price = price
 
-    def json(self):
+    def generate_json(self):
         return {'name': self.name, 'price': self.price}
 
     @classmethod
