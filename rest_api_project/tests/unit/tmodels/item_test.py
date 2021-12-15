@@ -12,6 +12,7 @@ class ModelTest(TestCase):
     def test_input_types(self):
         dummy_item = ItemModel('Test Item', 1.00)
         self.assertEqual(type(dummy_item.name), str)
+        self.assertEqual(type(dummy_item.price), float)
 
 
 '''
