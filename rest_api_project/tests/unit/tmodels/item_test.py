@@ -13,6 +13,11 @@ class ModelTest(TestCase):
         self.assertEqual(ItemModel.__tablename__, expected)
 
     def test_input_types(self):
+        '''
+         ItemModel takes two inputs: name & price.
+         this test tests that ItemModel's inputs are in the
+         expected type: string for name and float for price
+        '''
         dummy_item = ItemModel('Test Item', 1.00)
         self.assertEqual(type(dummy_item.name), str)
         self.assertEqual(type(dummy_item.price), float)
