@@ -14,6 +14,9 @@ class ModelTest(TestCase):
         self.assertEqual(type(dummy_item.name), str)
         self.assertEqual(type(dummy_item.price), float)
 
+    def test_price_precision(self)
+        pass
+
 
 '''
 class ItemModel(db.Model):
