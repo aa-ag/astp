@@ -6,6 +6,11 @@ from models.item import ItemModel
 ############------------ GLOBAL VARIABLE(S) ------------############
 class ModelTest(TestCase):
     def test_create_item(self):
+        '''
+         tests item creation by attempting to create an item,
+         and let's tester know if there are discrepancies between
+         inputs & created item
+        '''
         test_item = ItemModel('Test Item', 9.99)
         self.assertEqual(
             test_item.name, 
