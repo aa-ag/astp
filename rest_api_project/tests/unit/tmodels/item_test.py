@@ -6,6 +6,9 @@ from models.item import ItemModel
 ############------------ GLOBAL VARIABLE(S) ------------############
 class ModelTest(TestCase):
     def test_model_name(self):
+        '''
+         tests that ItemModel's table name is what's expected
+        '''
         expected = 'items'
         self.assertEqual(ItemModel.__tablename__, expected)
 
