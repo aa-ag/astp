@@ -30,6 +30,9 @@ class ModelTest(TestCase):
         expected_precision = round(dummy_item.price, 2)
         self.assertEqual(dummy_item.price, expected_precision)
 
+    def test_create_item(self):
+        pass
+
     def test_generate_json(self):
         '''
          tests ItemModel's generate_json method
@@ -40,20 +43,6 @@ class ModelTest(TestCase):
 
 
 '''
-class ItemModel(db.Model):
-    __tablename__ = 'items'
-
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80))
-    price = db.Column(db.Float(precision=2))
-
-    def __init__(self, name, price):
-        self.name = name
-        self.price = price
-
-    def json(self):
-        return {'name': self.name, 'price': self.price}
-
     @classmethod
     def find_by_name(cls, name):
         return cls.query.filter_by(name=name).first()
