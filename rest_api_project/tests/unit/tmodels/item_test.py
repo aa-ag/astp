@@ -22,7 +22,10 @@ class ModelTest(TestCase):
         self.assertEqual(type(dummy_item.name), str)
         self.assertEqual(type(dummy_item.price), float)
 
-    def test_price_precision(self):
+    def test_price_decimals(self):
+        '''
+         ItemModel's price input expects a floating point value with two places
+        '''
         dummy_item = ItemModel('Test Item', 1.33)
         expected_precision = round(dummy_item.price, 2)
         self.assertEqual(dummy_item.price, expected_precision)
