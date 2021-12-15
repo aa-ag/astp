@@ -10,9 +10,11 @@ class ModelTest(TestCase):
         self.assertEqual(ItemModel.__tablename__, expected)
 
     def test_input_types(self):
-        pass
+        dummy_item = ItemModel('Test Item', 1.00)
+        self.assertEqual(type(dummy_item.name), str)
 
-    '''
+
+'''
 class ItemModel(db.Model):
     __tablename__ = 'items'
 
@@ -38,4 +40,4 @@ class ItemModel(db.Model):
     def delete_from_db(self):
         db.session.delete(self)
         db.session.commit()
-    '''
+'''
