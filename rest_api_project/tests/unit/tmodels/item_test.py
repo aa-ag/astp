@@ -14,8 +14,10 @@ class ModelTest(TestCase):
         self.assertEqual(type(dummy_item.name), str)
         self.assertEqual(type(dummy_item.price), float)
 
-    def test_price_precision(self)
-        pass
+    def test_price_precision(self):
+        dummy_item = ItemModel('Test Item', 1.5050)
+        expected_precision = round(dummy_item.price, 2)
+        self.assertEqual(dummy_item.price, expected_precision)
 
 
 '''
