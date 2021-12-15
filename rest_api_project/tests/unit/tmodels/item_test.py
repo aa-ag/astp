@@ -31,6 +31,9 @@ class ModelTest(TestCase):
         self.assertEqual(dummy_item.price, expected_precision)
 
     def test_generate_json(self):
+        '''
+         tests ItemModel's generate_json method
+        '''
         dummy_item = ItemModel('Test Item', 1.99)
         expected_json = {'name': 'Test Item', 'price': 1.99}
         self.assertEqual(dummy_item.generate_json(), expected_json)
