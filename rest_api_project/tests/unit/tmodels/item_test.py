@@ -5,12 +5,27 @@ from models.item import ItemModel
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 class ModelTest(TestCase):
+    def test_create_item(self):
+        test_item = ItemModel('Test Item', 9.99)
+        self.assertEqual(
+            test_item.name, 
+            'Test Item',
+            'Item\'s name not equal to constructor argument.'
+        )
+        self.assertEqual(
+            test_item.price, 
+            9.99,
+            'Item\'s price not equal to constructor argument.'
+        )
+
+
     def test_model_name(self):
         '''
          tests that ItemModel's table name is what's expected
         '''
         expected = 'items'
         self.assertEqual(ItemModel.__tablename__, expected)
+
 
     def test_input_types(self):
         '''
@@ -22,6 +37,7 @@ class ModelTest(TestCase):
         self.assertEqual(type(dummy_item.name), str)
         self.assertEqual(type(dummy_item.price), float)
 
+
     def test_price_decimals(self):
         '''
          ItemModel's price input expects a floating point value with two places
@@ -30,8 +46,6 @@ class ModelTest(TestCase):
         expected_precision = round(dummy_item.price, 2)
         self.assertEqual(dummy_item.price, expected_precision)
 
-    def test_create_item(self):
-        pass
 
     def test_generate_json(self):
         '''
