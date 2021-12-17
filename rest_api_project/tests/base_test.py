@@ -19,4 +19,6 @@ class BaseTets(TestCase):
         self.app_context = app.app_context
 
     def tearDown(self):
-        pass
+        # reset everything in db
+        with app.app_context():
+            pass
