@@ -58,7 +58,11 @@ class ModelTest(TestCase):
         '''
         dummy_item = ItemModel('Test Item', 1.99)
         expected_json = {'name': 'Test Item', 'price': 1.99}
-        self.assertEqual(dummy_item.generate_json(), expected_json)
+        self.assertEqual(
+            dummy_item.generate_json(), 
+            expected_json,
+            f"Json export of item is incorrect. Received {dummy_item.generate_json()}, expected {expected_json}"
+        )
 
 
 '''
