@@ -11,7 +11,9 @@ class BaseTets(TestCase):
         # it setUp creates one
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'
         with app.app_context():
+            # initalize app
             db.init_app(app)
+            # create all tables
             db.create_all()
 
         # get test client
