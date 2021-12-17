@@ -10,7 +10,8 @@ class BaseTets(TestCase):
         # to ensure a db exists,
         # it setUp creates one
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'
-        pass
+        with app.app_context():
+            pass
 
     def tearDown(self):
         pass
