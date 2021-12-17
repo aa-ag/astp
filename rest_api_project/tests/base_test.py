@@ -11,7 +11,8 @@ class BaseTets(TestCase):
         # it setUp creates one
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'
         with app.app_context():
-            pass
+            db.init_app(app)
+            
 
     def tearDown(self):
         pass
