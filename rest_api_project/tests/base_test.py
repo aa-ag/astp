@@ -4,10 +4,10 @@ from app import app
 from db import db
 
 
-############------------ GLOBAL VARIABLE(S) ------------############
+############------------ CLASS(ES) ------------############
+class BaseTets(TestCase):
+    def setUp(self):
+        pass
 
-
-############------------ FUNCTION(S) ------------############
-
-
-############------------ DRIVER CODE ------------############
+    def tearDown(self):
+        pass
