@@ -5,7 +5,7 @@ from db import db
 
 
 ############------------ CLASS(ES) ------------############
-class BaseTets(TestCase):
+class BaseTest(TestCase):
     def setUp(self):
         # to ensure a db exists,
         # it setUp creates one
