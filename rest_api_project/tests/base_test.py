@@ -21,4 +21,7 @@ class BaseTets(TestCase):
     def tearDown(self):
         # reset everything in db
         with app.app_context():
-            pass
+            # delete everythig from current session
+            db.session.remove()
+            # delete everything from tables in db
+            db.drop_all()
