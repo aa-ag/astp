@@ -14,5 +14,7 @@ class BaseTets(TestCase):
             db.init_app(app)
             db.create_all()
 
+        # get test client
+
     def tearDown(self):
         pass
