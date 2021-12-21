@@ -19,3 +19,6 @@ class ItemTest(BaseTest):
 
             # assert that it does exist in the db after creating it
             self.assertIsNotNone(ItemModel.find_by_name('Test'))
+
+            # delete the test item we just created
+            item.delete_from_db()
