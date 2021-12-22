@@ -30,7 +30,10 @@ class ItemTest(TestCase):
                 )
 
             # delete the test item we just created
-            item.delete_from_db()
+            try:
+                item.delete_from_db()
+            except:
+                print("something went wrong; could not delete item to the db")
 
             # check that item was deleted
             self.assertIsNone(ItemModel.find_by_name('Test'))
