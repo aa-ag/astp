@@ -12,7 +12,10 @@ class ItemTest(BaseTest):
             item = ItemModel('Test', 9.99)
 
             # make sure it doesn't already exist
-            self.assertIsNone(ItemModel.find_by_name('Test'))
+            self.assertIsNone(
+                    ItemModel.find_by_name('Test'),
+                    f"Error: did find an item \"{item.name}\""
+                )
 
             # save it to the db if it doesn't
             item.save_to_db()
