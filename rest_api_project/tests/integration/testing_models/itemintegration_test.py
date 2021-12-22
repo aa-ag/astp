@@ -36,4 +36,7 @@ class ItemTest(TestCase):
                 print("something went wrong; could not delete item to the db")
 
             # check that item was deleted
-            self.assertIsNone(ItemModel.find_by_name('Test'))
+            self.assertIsNone(
+                    ItemModel.find_by_name('Test'),
+                    f"Error: did find an item \"{item.name}\""
+                )
