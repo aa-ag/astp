@@ -1,10 +1,10 @@
 ############------------ IMPORTS ------------############
-from unittest import TestCase
 from models.item import ItemModel
+from tests.base_test import BaseTest
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
-class ModelTest(TestCase):
+class ModelTest(BaseTest):
     def test_create_item(self):
         '''
          tests item creation by attempting to create an item,

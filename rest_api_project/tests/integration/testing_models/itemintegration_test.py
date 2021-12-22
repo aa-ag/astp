@@ -1,10 +1,10 @@
 ############------------ IMPORTS ------------############
-from tests.base_test import BaseTest
+from unittest import TestCase
 from models.item import ItemModel
 
 
 ############------------ TEST(S) ------------############
-class ItemTest(BaseTest):
+class ItemTest(TestCase):
     def test_crud(self):
         # generate context / all reqs
         with self.app_context():
@@ -18,7 +18,10 @@ class ItemTest(BaseTest):
                 )
 
             # save it to the db if it doesn't
-            item.save_to_db()
+            try:
+                item.save_to_db()
+            except:
+                print("something went wrong; could not save item to the db")
 
             # assert that it does exist in the db after creating it
             self.assertIsNotNone(ItemModel.find_by_name('Test'))
