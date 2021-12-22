@@ -24,7 +24,10 @@ class ItemTest(TestCase):
                 print("something went wrong; could not save item to the db")
 
             # assert that it does exist in the db after creating it
-            self.assertIsNotNone(ItemModel.find_by_name('Test'))
+            self.assertIsNotNone(
+                    ItemModel.find_by_name('Test'),
+                    f"Error: found item \"{item.name}\" in the database"
+                )
 
             # delete the test item we just created
             item.delete_from_db()
