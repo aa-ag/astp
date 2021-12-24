@@ -21,4 +21,11 @@ class ItemTest(BaseTest):
             self.assertIsNone(ItemModel.find_by_name('test'))
 
     def test_store_relationship(self):
-        pass
+        with self.app_context():
+            store = StoreModel('test_store')
+            item = ItemModel('test_item', 19.99, 1)
+
+            store.save_to_db()
+            item.save_to_db()
+
+            self.assertEqual(item.store.name, 'test_store')
