@@ -1,4 +1,4 @@
-from models.store import StoreModel
+from models.store_models import StoreModel
 from tests.base_test import BaseTest
 
 class StoreTest(BaseTest):
