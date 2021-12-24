@@ -19,3 +19,6 @@ class ItemTest(BaseTest):
             item.delete_from_db()
 
             self.assertIsNone(ItemModel.find_by_name('test'))
+
+    def test_store_relationship(self):
+        pass
