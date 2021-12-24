@@ -3,4 +3,6 @@ from tests.base_test import BaseTest
 
 class StoreTest(BaseTest):
     def test_create_store(self):
-        pass
+        store = StoreModel('test')
+        expected = 'test'
+        self.assertEqual(store.name, expected)
