@@ -22,3 +22,4 @@ In this repo, will consolidate exercises & class problems.
 - `Flask-JWT`
 - `uwsgi`
 - `behave==1.2.5`
+- `beautifulsoup4==4.5.3`
