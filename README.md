@@ -21,3 +21,4 @@ In this repo, will consolidate exercises & class problems.
 - `pip install psycopg2-binary`
 - `Flask-JWT`
 - `uwsgi`
+- `behave==1.2.5`
