@@ -15,11 +15,12 @@ In this repo, will consolidate exercises & class problems.
 ### env
 
 - `conda activate astp`
-- `conda install -c anaconda flask`
-- `pip install flask_restful`
-- `pip install Flask-SQLAlchemy`
-- `pip install psycopg2-binary`
+- `flask`
+- `flask_restful`
+- `Flask-SQLAlchemy`
+- `psycopg2-binary`
 - `Flask-JWT`
 - `uwsgi`
 - `behave==1.2.5`
 - `beautifulsoup4==4.5.3`
+- `selenium==3.4.1`
