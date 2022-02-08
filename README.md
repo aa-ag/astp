@@ -20,3 +20,4 @@ In this repo, will consolidate exercises & class problems.
 - `pip install Flask-SQLAlchemy`
 - `pip install psycopg2-binary`
 - `Flask-JWT`
+- `uwsgi`
