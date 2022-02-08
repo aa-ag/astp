@@ -2,8 +2,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 
 
-############------------ GLOBAL VARIABLE(S) ------------############
+############------------ GLOBAL ------------################
+app = Flask(__name__)
 
+posts = []
 
 ############------------ FUNCTION(S) ------------############
 
