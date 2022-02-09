@@ -34,6 +34,17 @@ def add_post():
         return redirect(url_for('blog_page'))
     return render_template('new_post.html')
 
+
+@app.route('/post/<string:title>')
+def see_post(title):
+    global posts
+
+    for post in posts:
+        if post['title'] == title:
+            return render_template('post.html', post=post)
+
+    return render_template('post.html', post=None)
+
     
 ############------------ DRIVER CODE ------------############
 if __name__ == '__main__':
